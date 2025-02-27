@@ -27,7 +27,7 @@ const { Navigator, Screen } = createBottomTabNavigator<AppRoutes>();
 
 export function AppRoutes() {
   const { tokens } = gluestackUIConfig;
-  const iconSize = tokens.space[7];
+  const iconSize = tokens.space[6];
 
   return (
     <Navigator
@@ -37,10 +37,12 @@ export function AppRoutes() {
         tabBarActiveTintColor: tokens.colors.green500,
         tabBarInactiveTintColor: tokens.colors.gray200,
         tabBarStyle: {
+          justifyContent: "center",
+          alignItems: "center",
           backgroundColor: tokens.colors.gray600,
           borderTopWidth: 0,
           height: Platform.OS === "android" ? "auto" : 96,
-          paddingBottom: tokens.space["10"],
+          paddingBottom: tokens.space["12"],
           paddingTop: tokens.space["4"],
         },
       }}
